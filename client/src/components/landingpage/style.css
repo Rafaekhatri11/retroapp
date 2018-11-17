@@ -1,0 +1,50 @@
+#join{
+    color: #f59156
+}
+
+.caret{
+    display: none;
+}
+#shape{
+    -webkit-clip-path: polygon(0 60%, 34% 31%, 55% 19%, 71% 24%, 100% 77%, 100% 100%, 0 100%);
+clip-path: polygon(0 60%, 34% 31%, 55% 19%, 71% 24%, 100% 77%, 100% 100%, 0 100%);
+}
+
+.dropdown-menu>li>a{
+    color: white
+}
+
+.dropdown-menu{
+    background: #133a62
+}
+.container{
+    width: 100%
+}
+
+.form-control{
+    background: #f6f6f6
+}
+
+.select option{
+    background: red;
+}
+
+.tabclass{
+    background: blue;
+}
+
+
+#blue{
+    background-image: url("./Blueshape.png");
+    background-repeat: no-repeat, repeat;
+    background-color: white;
+    background-size: cover;
+  
+}
+
+#green{
+    background-image: url("./green.png");
+    background-repeat: no-repeat, repeat;
+    background-color:  rgb(224, 152, 152);
+    background-size: cover;
+}
