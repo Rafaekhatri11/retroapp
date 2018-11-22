@@ -1,30 +1,32 @@
 import React, { Component } from 'react';
-import Landingpage from './components/landingpage/landing';
-import Createretro from './components/createretro/createretro';
-import {BrowserRouter as Router,Route ,
-  Link,
-  Redirect,
-  withRoute} from 'react-router-dom';
-import {Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 import store from '../src/store/index';
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
+import Routers from './Route';
+import history from './History';
 
-
+const client = new ApolloClient({
+  uri: "http://localhost:5000/graphql"
+})
 
 
 class App extends Component {
+
+
+
   render() {
+ 
     return (
 
+
+      //  <Createretro />
+      <ApolloProvider client={client}>
       <Provider store={store}>
-      <Router >
-        
-    <div>
-      <Route exact path="/" component={Landingpage}/>
-      <Route path="/createretro" component={Createretro} />
-            {/* <Createretro />   */}
-      </div>
-      </Router>
+            {/* <Landingpage /> */}
+          <Routers history={history} />
       </Provider>
+      </ApolloProvider>
     );
   }
 }
